@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You. Always.</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(-45deg, #f8cdda, #d1c4e9, #fde2e4);
+      background-size: 300% 300%;
+      animation: gradientMove 12s ease infinite;
+      color: #2e2e2e;
+      overflow: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Content ===== */
+    .container {
+      width: 100%;
+      max-width: 700px;
+      padding: 24px;
+      text-align: center;
+      animation: fadeIn 1.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .name {
+      font-size: 0.95rem;
+      color: #6b2c4f;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      margin-bottom: 18px;
+      color: #3b2c35;
+    }
+
+    p {
+      font-size: clamp(0.95rem, 4vw, 1.05rem);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      color: #7a3e5d;
+      font-weight: 500;
+    }
+
+    .final {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 5vw, 1.6rem);
+      margin-top: 12px;
+      color: #5a2a44;
+    }
+
+    .heart {
+      font-size: 1.8rem;
+      margin-top: 6px;
+      animation: heartbeat 1.4s infinite;
+      color: #d6336c;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    /* ===== Floating Hearts (Mobile Safe) ===== */
+    .hearts span {
+      position: absolute;
+      bottom: -40px;
+      font-size: 16px;
+      opacity: 0.35;
+      animation: floatUp 12s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      20% { opacity: 0.4; }
+      100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+
+    /* ===== Desktop Enhancements ===== */
+    @media (min-width: 768px) {
+      .container {
+        padding: 40px;
+      }
+      .hearts span {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating hearts -->
+  <div class="hearts">
+    <span style="left:10%">❤️</span>
+    <span style="left:30%; animation-delay:2s;">💗</span>
+    <span style="left:50%; animation-delay:4s;">❤️</span>
+    <span style="left:70%; animation-delay:1s;">💖</span>
+    <span style="left:85%; animation-delay:3s;">❤️</span>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="name">Hi Bindu (Teacher Amma),</div>
+
+    <h1>For You. Always.</h1>
+
+    <p>
+      Life may change and paths may shift,<br>
+      <span class="highlight">but my choice will always be you.</span><br><br>
+
+      I may not know where life will take us,<br>
+      but I know this with all my heart.<br><br>
+
+      <span class="highlight">I will wait for you —</span><br>
+      not because I have to,<br>
+      but because I want to.<br><br>
+
+      I will support your career, your dreams,<br>
+      and every goal you choose to follow,<br>
+      even if it takes time.<br><br>
+
+      When life feels easy, I’ll smile with you.<br>
+      When life feels hard, I’ll hold your hand<br>
+      and remind you that you’re not alone.<br><br>
+
+      This is not pressure.<br>
+      This is not expectation.<br><br>
+
+      <span class="highlight">
+        This is my promise,<br>
+        made with love and patience.
+      </span>
+    </p>
+
+    <div class="final">
+      Will you walk this journey with me?
+      <div class="heart">❤️</div>
+    </div>
+  </div>
+
+</body>
+</html>
