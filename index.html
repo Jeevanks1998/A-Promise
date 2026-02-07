@@ -6,126 +6,107 @@
   <title>For You. Always.</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== Reset ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-weight: 700;
     }
 
     body {
       min-height: 100vh;
-      font-family: 'Poppins', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(-45deg, #f8cdda, #d1c4e9, #fde2e4);
-      background-size: 300% 300%;
-      animation: gradientMove 12s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #fde2e4, #f8cdda, #e0c3fc);
+      background-size: 500% 500%;
+      animation: bgMove 10s ease-in-out infinite;
       color: #2e2e2e;
       overflow: hidden;
     }
 
-    @keyframes gradientMove {
+    @keyframes bgMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* ===== Content ===== */
     .container {
       width: 100%;
-      max-width: 700px;
-      padding: 24px;
+      max-width: 420px;
+      padding: 22px;
       text-align: center;
-      animation: fadeIn 1.8s ease;
+      animation: fadeIn 1.6s ease;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .name {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #6b2c4f;
       margin-bottom: 10px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 6vw, 2.8rem);
-      margin-bottom: 18px;
+      font-size: 2.2rem;
+      margin-bottom: 16px;
       color: #3b2c35;
     }
 
     p {
-      font-size: clamp(0.95rem, 4vw, 1.05rem);
-      line-height: 1.8;
-      margin-bottom: 18px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+      word-wrap: break-word;
     }
 
     .highlight {
       color: #7a3e5d;
-      font-weight: 500;
     }
 
+    .soft {
+      font-size: 0.85rem;
+      color: #5a5a5a;
+      margin: 14px 0;
+      font-style: italic;
+    }
+
+    /* ✅ FIXED FINAL LINE */
     .final {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.3rem, 5vw, 1.6rem);
-      margin-top: 12px;
+      font-size: 1.2rem;   /* smaller for mobile */
+      margin-top: 14px;
       color: #5a2a44;
+      line-height: 1.5;
+      padding: 0 8px;      /* prevents edge overflow */
+      word-wrap: break-word;
     }
 
     .heart {
-      font-size: 1.8rem;
+      display: block;      /* moves heart to next line */
+      font-size: 1.6rem;
       margin-top: 6px;
-      animation: heartbeat 1.4s infinite;
+      animation: beat 1.3s infinite;
       color: #d6336c;
     }
 
-    @keyframes heartbeat {
+    @keyframes beat {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+      50% { transform: scale(1.25); }
     }
 
-    /* ===== Floating Hearts (Mobile Safe) ===== */
-    .hearts span {
-      position: absolute;
-      bottom: -40px;
-      font-size: 16px;
-      opacity: 0.35;
-      animation: floatUp 12s linear infinite;
-    }
-
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      20% { opacity: 0.4; }
-      100% {
-        transform: translateY(-110vh);
-        opacity: 0;
-      }
-    }
-
-    /* ===== Desktop Enhancements ===== */
+    /* Desktop enhancement */
     @media (min-width: 768px) {
-      .container {
-        padding: 40px;
-      }
-      .hearts span {
-        font-size: 20px;
+      .final {
+        font-size: 1.45rem;
       }
     }
   </style>
@@ -133,52 +114,57 @@
 
 <body>
 
-  <!-- Floating hearts -->
-  <div class="hearts">
-    <span style="left:10%">❤️</span>
-    <span style="left:30%; animation-delay:2s;">💗</span>
-    <span style="left:50%; animation-delay:4s;">❤️</span>
-    <span style="left:70%; animation-delay:1s;">💖</span>
-    <span style="left:85%; animation-delay:3s;">❤️</span>
-  </div>
-
-  <!-- Content -->
   <div class="container">
-    <div class="name">Hi Bindu (Teacher Amma),</div>
+    <div class="name">Hi Bindu (Artist,Teacher Amma),</div>
 
     <h1>For You. Always.</h1>
 
     <p>
-      Life may change and paths may shift,<br>
-      <span class="highlight">but my choice will always be you.</span><br><br>
+      Life may change.<br>
+      Paths may shift.<br>
+      <span class="highlight">My choice stays the same — you.</span>
+    </p>
 
-      I may not know where life will take us,<br>
-      but I know this with all my heart.<br><br>
+    <p>
+      I don’t know the future.<br>
+      But my heart is sure.
+    </p>
 
-      <span class="highlight">I will wait for you —</span><br>
-      not because I have to,<br>
-      but because I want to.<br><br>
+    <p>
+      I will wait for you.<br>
+      Not because I have to.<br>
+      Because I want to.
+    </p>
 
+    <p>
       I will support your career, your dreams,<br>
       and every goal you choose to follow,<br>
-      even if it takes time.<br><br>
-
-      When life feels easy, I’ll smile with you.<br>
-      When life feels hard, I’ll hold your hand<br>
-      and remind you that you’re not alone.<br><br>
-
-      This is not pressure.<br>
-      This is not expectation.<br><br>
-
-      <span class="highlight">
-        This is my promise,<br>
-        made with love and patience.
-      </span>
+      even if it takes time.
     </p>
+
+    <p>
+      Easy days — I smile with you.<br>
+      Hard days — I stand with you.
+    </p>
+
+    <p>
+      This is not pressure.<br>
+      This is not expectation.
+    </p>
+
+    <p class="highlight">
+      This is my promise.<br>
+      With love and patience.
+    </p>
+
+    <div class="soft">
+      Please don’t feel bad about me asking again.<br>
+      I don’t know why… I just care.
+    </div>
 
     <div class="final">
       Will you walk this journey with me?
-      <div class="heart">❤️</div>
+      <span class="heart">❤️</span>
     </div>
   </div>
 
